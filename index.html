@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8">
     <title>Speed Stars</title>
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        background: #000;
-        height: 100%;
-        overflow: hidden;
-      }
-      #unity-container {
-        width: 100vw;
-        height: 100vh;
-      }
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            height: 100%;
+            overflow: hidden;
+        }
+        #unity-container {
+            width: 100vw;
+            height: 100vh;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="unity-container"></div>
     <script src="Build_v2-40w.loader.js"></script>
     <script>
-      createUnityInstance(document.querySelector("#unity-container"), {
-        dataUrl: "6127fbba3e79cbcada24ba1ffd033f77.data",
-        frameworkUrl: "b0e5ec181474d494c6ff3c9ad9c3b1bd.js",
-        codeUrl: "fe2a5824416bebe1cc941510618103f9.wasm",
-      }).then((unityInstance) => {
-        console.log("Game loaded!");
-      }).catch((error) => {
-        console.error("Unity failed to load:", error);
-      });
+        createUnityInstance(document.querySelector("#unity-container"), {
+            dataUrl: "6127fbba3e79cbcada24ba1ffd033f77.data",
+            frameworkUrl: "b0e5ec181474d494c6ff3c9ad9c3b1bd.js",
+            codeUrl: "fe2a5824416bebe1cc941510618103f9.wasm",
+        }).then((unityInstance) => {
+            console.log("Game loaded!");
+        }).catch((error) => {
+            console.error("Unity failed to load:", error);
+        });
     </script>
-  </body>
+</body>
 </html>
-
